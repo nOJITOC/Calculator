@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".ui.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/operations_tv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30"
+            android:background="@color/gray"
+
+            android:textSize="@dimen/text_36"
+            />
+
+        <android.support.v7.widget.GridLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="70"
+            android:background="@color/grayLight"
+
+            app:columnCount="4">
+
+            <TextView
+                android:id="@+id/result_tv"
+                app:layout_columnSpan="3"
+                app:layout_rowWeight="1"
+                android:textSize="@dimen/text_24"
+                app:layout_gravity="left"/>
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="eraseClick"
+
+                android:text="c"
+                app:layout_column="3"/>
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="digitClick"
+                android:text="1"/>
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="digitClick"
+
+                android:text="2"/>
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="digitClick"
+
+                android:text="3"/>
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="operationClick"
+                android:text="+"/>
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="digitClick"
+                android:text="4"/>
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="digitClick"
+                android:text="5"/>
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="digitClick"
+                android:text="6"/>
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="operationClick"
+                android:text="-"/>
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="digitClick"
+                android:text="7"/>
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="digitClick"
+                android:text="8"/>
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="digitClick"
+                android:text="9"/>
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="operationClick"
+                android:text="*"/>
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="multiplierClick"
+                android:text="."/>
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="digitClick"
+                android:text="0"/>
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="operationClick"
+                android:text="%"
+                />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="operationClick"
+                android:text="/"/>
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="leftBraceClick"
+                android:text="("/>
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="rightBraceClick"
+                android:text=")"/>
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="resultClick"
+                android:text="="
+                app:layout_columnSpan="2"
+                />
+        </android.support.v7.widget.GridLayout>
+    </LinearLayout>
+</RelativeLayout>
